@@ -1,0 +1,17 @@
+<div><h1>New</h1></div>
+<%= form_tag '/', id: 'form', method: 'post', multipart: true do %>
+    <!-- Title -->
+    <div class="form-group">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-input" type="text" id="title" name="title" placeholder="Title" />
+    </div>
+    <!-- Content -->
+    <div class="form-group">
+        <label class="form-label" for="content">Content</label>
+        <textarea class="form-input" id="content" name="content" placeholder="Textarea" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <%= file_field_tag :image %>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+<% end %>

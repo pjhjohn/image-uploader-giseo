@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+  <pre class="code">
+    title   : <%= post.title %>
+    content : <%= post.content %>
+    <img src="<%= post.image %>" style="max-height:300px"/>
+  </pre>
+<% end %>
